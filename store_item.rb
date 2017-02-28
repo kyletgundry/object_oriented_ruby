@@ -12,7 +12,7 @@ puts shoe3
 puts 
 
 class Shoes
-  attr_reader "brand", "color", "price"
+  attr_reader :brand, :color, :price
   attr_writer :brand, :color, :price
 
   def initialize(brand, color, price)
