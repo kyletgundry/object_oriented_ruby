@@ -29,7 +29,9 @@ end
 
 shoe1 = Shoes.new({brand: "Vince",color: "black",price: 229.99})
 shoe2 = Shoes.new brand: "Nike", color: "white", price: 99.99
+shoe3 = Shoes.new(brand: "Adidas", color: "green", price: 59.99)
 
 shoe2.color = "blue"
 puts shoe1.info
 puts shoe2.info
+puts shoe3.info
