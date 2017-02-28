@@ -12,8 +12,8 @@ puts shoe3
 puts 
 
 class Shoes
-  attr_reader :brand, :color, :price
-  attr_writer :brand, :color, :price
+  attr_reader :brand, :color, :price #make the getters to return the value
+  attr_writer :brand, :color, :price #make the methods to update the values
 
   def initialize(brand, color, price)
     @brand = brand
