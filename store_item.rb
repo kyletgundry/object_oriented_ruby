@@ -9,6 +9,7 @@ puts "I have #{shoe2[:Color]} #{shoe2[:Brand]} shoes that cost $#{shoe2[:Price]}
 puts "I have #{shoe3[:Color]} #{shoe3[:Brand]} shoes that cost $#{shoe3[:Price]}."
 
 puts shoe3
+puts 
 
 class Shoes
   attr_reader "brand", "color", "price"
@@ -27,5 +28,8 @@ class Shoes
 end
 
 shoe1 = Shoes.new("Vince", "black", 229.99)
+shoe2 = Shoes.new("Nike", "white", 99.99)
 
+shoe2.color = "blue"
 puts shoe1.info
+puts shoe2.info
