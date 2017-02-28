@@ -15,10 +15,10 @@ class Shoes
   attr_reader :brand, :color, :price #make the getters to return the value
   attr_writer :brand, :color, :price #make the methods to update the values
 
-  def initialize(brand, color, price)
-    @brand = brand
-    @color = color
-    @price = price
+  def initialize(shoe_description)
+    @brand = shoe_description[:brand]
+    @color = shoe_description[:color]
+    @price = shoe_description[:price]
   end
 
   def info
@@ -27,8 +27,8 @@ class Shoes
 
 end
 
-shoe1 = Shoes.new("Vince", "black", 229.99)
-shoe2 = Shoes.new("Nike", "white", 99.99)
+shoe1 = Shoes.new({brand: "Vince",color: "black",price: 229.99})
+shoe2 = Shoes.new brand: "Nike", color: "white", price: 99.99
 
 shoe2.color = "blue"
 puts shoe1.info
