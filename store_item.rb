@@ -8,3 +8,5 @@ puts "I have " + shoe1["Color"] + " " + shoe1["Brand"] + " shoes that cost $" + 
 puts "I have #{shoe2[:Color]} #{shoe2[:Brand]} shoes that cost $#{shoe2[:Price]}."
 puts "I have #{shoe3[:Color]} #{shoe3[:Brand]} shoes that cost $#{shoe3[:Price]}."
 
+puts shoe3
+
