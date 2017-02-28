@@ -25,6 +25,10 @@ class Shoes
     "I have #{@color} #{@brand} shoes that cost me $#{@price}."
   end
 
+  def on_sale
+    @price = 0.80 * @price
+  end
+
 end
 
 shoe1 = Shoes.new({brand: "Vince",color: "black",price: 229.99})
@@ -37,4 +41,6 @@ puts shoe2.info
 puts shoe3.info
 shoe3.color = "black"
 shoe3.price = 89.99
+puts shoe3.info
+shoe3.on_sale
 puts shoe3.info
