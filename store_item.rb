@@ -35,3 +35,6 @@ shoe2.color = "blue"
 puts shoe1.info
 puts shoe2.info
 puts shoe3.info
+shoe3.color = "black"
+shoe3.price = 89.99
+puts shoe3.info
