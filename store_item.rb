@@ -10,3 +10,22 @@ puts "I have #{shoe3[:Color]} #{shoe3[:Brand]} shoes that cost $#{shoe3[:Price]}
 
 puts shoe3
 
+class Shoes
+  attr_reader "brand", "color", "price"
+  attr_writer :brand, :color, :price
+
+  def initialize(brand, color, price)
+    @brand = brand
+    @color = color
+    @price = price
+  end
+
+  def info
+    "I have #{@color} #{@brand} shoes that cost me $#{@price}."
+  end
+
+end
+
+shoe1 = Shoes.new("Vince", "black", 229.99)
+
+puts shoe1.info
