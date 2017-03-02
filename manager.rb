@@ -41,6 +41,10 @@ class Manager < Employee
     end
   end
 
+  def give_one_raise(raise)
+    @salary = @salary * raise
+  end
+
   def fire_all_employees
     @employees.each do |employee|
       employee.active = false
@@ -57,3 +61,7 @@ puts employee1.print_info
 manager.fire_all_employees
 
 puts employee1.active
+
+puts
+employee2.give_one_raise(1.2)
+puts employee2.print_info

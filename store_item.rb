@@ -1,15 +1,15 @@
-shoe1 = {"Brand" => "Nike", "Color" => "Black", "Price" => 99.99}
-shoe2 = {Brand: "Adidas", Color: "Silver", Price: 79.99}
-shoe3 = {:Brand => "Converse", :Color => "White"}
+# shoe1 = {"Brand" => "Nike", "Color" => "Black", "Price" => 99.99}
+# shoe2 = {Brand: "Adidas", Color: "Silver", Price: 79.99}
+# shoe3 = {:Brand => "Converse", :Color => "White"}
 
-shoe3[:Price] = 59.99
+# shoe3[:Price] = 59.99
 
-puts "I have " + shoe1["Color"] + " " + shoe1["Brand"] + " shoes that cost $" + shoe1["Price"].to_s + "."
-puts "I have #{shoe2[:Color]} #{shoe2[:Brand]} shoes that cost $#{shoe2[:Price]}."
-puts "I have #{shoe3[:Color]} #{shoe3[:Brand]} shoes that cost $#{shoe3[:Price]}."
+# puts "I have " + shoe1["Color"] + " " + shoe1["Brand"] + " shoes that cost $" + shoe1["Price"].to_s + "."
+# puts "I have #{shoe2[:Color]} #{shoe2[:Brand]} shoes that cost $#{shoe2[:Price]}."
+# puts "I have #{shoe3[:Color]} #{shoe3[:Brand]} shoes that cost $#{shoe3[:Price]}."
 
-puts shoe3
-puts 
+# puts shoe3
+# puts 
 
 class Shoes
   attr_reader :brand, :color, :price #make the getters to return the value
@@ -31,9 +31,21 @@ class Shoes
 
 end
 
+class Food < Shoes
+
+  attr_reader :shelf_life
+
+  def initialize(shelf_life)
+    @shelf_life = shelf_life[:shelf_life]
+  end
+
+end
+
 shoe1 = Shoes.new({brand: "Vince",color: "black",price: 229.99})
 shoe2 = Shoes.new brand: "Nike", color: "white", price: 99.99
 shoe3 = Shoes.new(brand: "Adidas", color: "green", price: 59.99)
+
+food = Food.new(shelf_life: "2 years")
 
 shoe2.color = "blue"
 puts shoe1.info
@@ -44,3 +56,5 @@ shoe3.price = 89.99
 puts shoe3.info
 shoe3.on_sale
 puts shoe3.info
+
+p food.shelf_life

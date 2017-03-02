@@ -1,8 +1,4 @@
-class Vehicle
-  def initialize(input_hash)
-    @speed = 0
-    @direction = 'north'
-  end
+module Moveable
 
   def brake
     @speed = 0
@@ -17,11 +13,14 @@ class Vehicle
   end
 end
 
-class Car < Vehicle 
-
+class Car
+  include Moveable
+  
   attr_reader :fuel
+  
   def initialize(input_hash)
-    super
+    @speed = 0
+    @direction = 'north'
     @fuel = input_hash[:fuel]
     @make = input_hash[:make]
     @model = input_hash[:model]
@@ -32,12 +31,11 @@ class Car < Vehicle
   end
 end
 
-class Bike < Vehicle
-
-
-
+class Bike
+  include Moveable
   def initialize(input_hash)
-    super
+    @speed = 0
+    @direction = 'north'
     @speed = input_hash[:speed]
     @type = input_hash[:type]
     @weight = input_hash[:weight]
